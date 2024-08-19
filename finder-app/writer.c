@@ -3,7 +3,7 @@
 
 int main(int argc, char **argv)
 {
-    if(argc < 2)
+    if(argc < 3)
     {
         syslog(LOG_ERR , "Not enough arguments");
         return 1;
@@ -15,6 +15,6 @@ int main(int argc, char **argv)
         fptr = fopen(argv[1], "w");
         fprintf(fptr, "%s", argv[2]);
         fclose(fptr);
-    }
-    return 0;
+        return 0;
+    } 
 }
